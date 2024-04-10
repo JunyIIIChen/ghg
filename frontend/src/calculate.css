@@ -1,0 +1,145 @@
+.options-container > div {
+  position: relative; /* 使div成为绝对定位的input的定位上下文 */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%; /* 覆盖整个父元素 */
+  height: 100%; /* 覆盖整个父元素 */
+  top: 0;
+  left: 0;
+}
+.fixed-div {
+  position: fixed;
+  right: 20px; /* 或其他你想要的距离 */
+  bottom: 20px; /* 或其他你想要的距离 */
+  z-index: 1000; /* 确保它在其他元素之上 */
+  width: 5%;
+ padding-right: 45%;
+}
+
+
+
+/* 定义 label 的基本样式，让它看起来像按钮 */
+label {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 10px; /* 选项之间的间距 */
+  margin-top: 10px;
+  margin-left: 150%;
+  border: 1px solid lightgreen; /* 边框，视觉上区分 */
+  background-color: lightgreen; /* 默认背景色为透明 */
+  transition: background-color 0.3s; /* 平滑背景色变化 */
+  border-radius: 30px;
+  width: 200px;
+  text-align: center;
+}
+
+/* 当 input 被选中时，改变其紧随的 label 的背景色 */
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  background-color: darkgreen; /* 选中时的背景色 */
+  color: lightgreen; /* 选中时的文字色，可按需调整 */
+}
+
+/* 其它样式保持不变 */
+.fade {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-exit {
+  opacity: 0;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 将选项左对齐 */
+  margin-left: 5%;
+  font-size: 20px;
+  margin-top: 5%;
+  background-color: transparent; /* 背景色改为透明 */
+}
+
+.question-update {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+}
+
+/* 其它 CSS 保持不变 */
+
+/* calculate.css */
+/* calculate.css */
+.image-container {
+    display: flex;
+    justify-content: center; /* To center the whole group */
+    align-items: center; /* If you want vertical alignment as well */
+  }
+  
+  .image-container img {
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* This will cover the area without stretching the image */
+    margin-right: 45%; /* Half of the desired gap on the right */
+  }
+  
+  .image-container img:last-child {
+    margin-right: 0; /* No margin for the last image */
+  }
+  .chart-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .chart-box {
+    flex: 1; 
+    margin: 10px; 
+    max-width: 300px; 
+  }
+  .calculate-button {
+    background-color: lightgreen;
+    font-size: 25px;
+    border: none; /* 去除边框 */
+    border-radius: 25px; /* 设置为高度的一半使两边成为半圆形 */
+    padding: 10px 20px; /* 按钮内部的上下和左右填充 */
+    cursor: pointer; /* 鼠标悬停时显示手型指针 */
+    transition: background-color 0.3s; /* 平滑背景颜色变化 */
+  }
+  
+  .calculate-button:hover {
+    background-color: darkgreen; /* 鼠标悬停时背景色变深 */
+  }
+  .click-button {
+    background-color: #2d9331;
+    font-size: 25px;
+    border: none; /* 去除边框 */
+    border-radius: 25px; /* 设置为高度的一半使两边成为半圆形 */
+    padding: 10px 20px; /* 按钮内部的上下和左右填充 */
+    cursor: pointer; /* 鼠标悬停时显示手型指针 */
+    transition: background-color 0.3s; /* 平滑背景颜色变化 */
+  }
+  
+  .click-button:hover {
+    background-color: darkgreen; /* 鼠标悬停时背景色变深 */
+  }
+  
+  
+  

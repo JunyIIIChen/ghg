@@ -1,0 +1,31 @@
+/* 在你的CSS文件中 */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .spinner {
+    border: 15px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #28a745; /* 一个绿色的shade */
+    border-radius: 50%;
+    width: 30vh; /* 使用视口高度的百分比来定义宽度 */
+    height: 30vh; /* 高度和宽度相同，形成一个圆 */
+    animation: spin 3s linear infinite;
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    margin-top: -25vh; /* 用负边距来正确居中圆环 */
+    margin-left: -25vh;
+  }
+  
+  .analyzing-text {
+    position: absolute;
+    top: 80%; /* 在圆环下方 */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%; /* 确保文本居中 */
+    font-size: 1.5em;
+    color: #28a745; /* 使用与圆环相同的绿色 */
+  }
+  

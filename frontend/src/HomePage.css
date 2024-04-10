@@ -1,0 +1,124 @@
+/* HomePage.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center; /* Center the main and sidebar containers */
+  margin: 20px; /* Space around the entire container */
+}
+
+.home-container {
+  width: 70%; /* Main content width */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-right: -25%; /* Gap between main content and sidebar */
+}
+
+.knowledge-sidebar {
+  width: 25%; /* Sidebar width */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align the knowledge links to center */
+}
+
+.home-header {
+  background-color: #007bff; /* Blue header color */
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-header h1 {
+  margin: 0;
+}
+
+.why-project-content {
+  display: flex;
+  align-items: center; /* Vertically center the items if the text is shorter than the image */
+  justify-content: flex-start;
+}
+
+.why-project-text {
+  flex: 1;
+  padding-left: 20px; /* Adjust the spacing as needed */
+}
+
+.project-image {
+  margin-top: 5%;
+  width: 40%;
+  height: 50%;
+  border-radius: 5%;
+}
+
+.home-navigation {
+  text-align: center; /* Center the navigation link */
+  margin: 20px 0;
+}
+
+.home-link {
+  color: #007bff;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 4px; /* Rounded corners for the link */
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #007bff; /* Blue border for the link */
+  font-weight: bold;
+  margin-right: 10px; /* Space between buttons */
+}
+
+.home-link:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.knowledge-link {
+  position: relative; /* Needed to position the text over the image */
+  display: inline-block; /* Allows us to position the span */
+  text-decoration: none;
+  margin-bottom: 20px; /* Space between knowledge links */
+  margin-left: 150%;
+}
+
+.image-container {
+  position: relative;
+
+}
+
+.hover-image {
+  width: 100%; /* Makes the image fill the container */
+  transition: opacity 0.3s; /* Smooth transition for the hover effect */
+  display: block;
+  border-radius: 20%; /* Circle shaped images */
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%; /* Position the text in the center of the image */
+  left: 30%;
+  transform: translate(-50%, -50%); /* Center the text exactly */
+  color: #ff0000; /* Text color */
+  visibility: hidden; /* Hide the text by default */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+  text-align: center;
+  width: 100%; /* Full width */
+  padding: 10px 0; /* Padding for the text */
+  box-sizing: border-box;
+}
+
+.knowledge-link:hover .hover-text {
+  visibility: visible; /* Show the text on hover */
+  opacity: 1;
+}
